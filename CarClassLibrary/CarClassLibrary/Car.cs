@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace CarClassLibrary 
+{
+    public class Car 
+    {
+        public string Make { get; set; }
+        public string Model { get; set; }
+        public decimal Price { get; set; }
+
+        public Car()
+        {
+            this.Make = "None";
+            this.Model = "None";
+            this.Price = 0.00M;
+        }
+
+        public Car(string a, string b, decimal c)
+        {
+            Make = a;
+            Model = b;
+            Price = c;
+        }
+    }
+}
