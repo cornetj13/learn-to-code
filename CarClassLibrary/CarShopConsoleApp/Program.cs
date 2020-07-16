@@ -11,22 +11,57 @@ namespace CarShopConsoleApp
     {
         static void Main(string[] args) 
         {
-            Car c = new Car("Wayne Industries", "Batmobile", 1340000);
-            Car d = new Car("Ford", "Mustang", 9200);
 
-            Console.WriteLine("Car c is as follows: " + c.Make + " " + c.Model + " " + c.Price);
-            Console.WriteLine("Car d is as follows: " + d.Make + " " + d.Model + " " + d.Price);
+            // Greet User.
+            Console.WriteLine("Welcome to my car store! First, please create a car inventory.");
+            Console.WriteLine("Next, choose the cars you want to buy from your inventory.");
+            Console.WriteLine("Last, you can check out and see the total price you'll need to pay!");
 
-            Store myStore = new Store();
+            int action = chooseAction();
 
-            myStore.ShoppingList.Add(c);
-            myStore.ShoppingList.Add(d);
+            while (action != 0) 
+            {
+                Console.WriteLine("You chose action " + action);
+                action = chooseAction();
+            }
+            
+            //Car c = new Car("Wayne Industries", "Batmobile", 1340000);
+            //Car d = new Car("Ford", "Mustang", 9200);
 
-            decimal totalShoppingCost = myStore.Checkout();
+            //Console.WriteLine("Car c is as follows: " + c.Make + " " + c.Model + " " + c.Price);
+            //Console.WriteLine("Car d is as follows: " + d.Make + " " + d.Model + " " + d.Price);
 
-            Console.WriteLine("The Shopping List Total is: " + totalShoppingCost);
+            //Store myStore = new Store();
 
-            Console.ReadLine();
+            //myStore.ShoppingList.Add(c);
+            //myStore.ShoppingList.Add(d);
+
+            //decimal totalShoppingCost = myStore.Checkout();
+
+            //Console.WriteLine("The Shopping List Total is: " + totalShoppingCost);
+
+            //Console.ReadLine();
+        }
+
+        static public int chooseAction()
+        {
+            int choice = 0;
+            Console.WriteLine("Choose an action:");
+            Console.WriteLine("Press 0 to quit.");
+            Console.WriteLine("Press 1 to add a car to your inventory.");
+            Console.WriteLine("Press 2 to add a car to your shopping list.");
+            Console.WriteLine("Press 3 to checkout and see your total price.");
+
+            try 
+            {
+                choice = int.Parse(Console.ReadLine());
+            } 
+            catch 
+            {
+                Console.WriteLine("Invalid action. Quitting Application.");
+            }
+
+            return choice;
         }
     }
 }
