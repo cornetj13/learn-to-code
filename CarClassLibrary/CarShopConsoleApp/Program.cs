@@ -15,6 +15,7 @@ namespace CarShopConsoleApp
             Store myStore = new Store();
 
             // Greet User.
+            Console.WriteLine("Hey Cedrick, check this out!");  // Demo to Skeddy
             Console.WriteLine("Welcome to my car store! First, please create a car inventory.");
             Console.WriteLine("Next, choose the cars you want to buy from your inventory.");
             Console.WriteLine("Last, you can check out and see the total price you'll need to pay!");
