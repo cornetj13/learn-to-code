@@ -11,6 +11,8 @@ namespace CarShopConsoleApp
     {
         static void Main(string[] args) 
         {
+            // Declare a New Store.
+            Store myStore = new Store();
 
             // Greet User.
             Console.WriteLine("Welcome to my car store! First, please create a car inventory.");
@@ -22,6 +24,34 @@ namespace CarShopConsoleApp
             while (action != 0) 
             {
                 Console.WriteLine("You chose action " + action);
+
+                switch (action)
+                {
+                    case 1:
+
+                        Console.WriteLine("You chose to add a new car to the inventory");
+
+                        String carMake = "";
+                        String carModel = "";
+                        Decimal carPrice = 0;
+
+                        Console.WriteLine("What is the car make? (For example: Ford, GM, Nissan, etc.)");
+                        carMake = Console.ReadLine();
+
+                        Console.WriteLine("What is the car model? (For example: Focus, Corvette, Sentra, etc.)");
+                        carModel = Console.ReadLine();
+
+                        Console.WriteLine("What is the price of the car?");
+                        carPrice = int.Parse(Console.ReadLine());
+
+                        Car newCar = new Car(carMake, carModel, carPrice);
+                        myStore.CarList.Add(newCar);
+
+                        printInventory(myStore);
+                        break;
+
+                }
+
                 action = chooseAction();
             }
             
@@ -31,8 +61,6 @@ namespace CarShopConsoleApp
             //Console.WriteLine("Car c is as follows: " + c.Make + " " + c.Model + " " + c.Price);
             //Console.WriteLine("Car d is as follows: " + d.Make + " " + d.Model + " " + d.Price);
 
-            //Store myStore = new Store();
-
             //myStore.ShoppingList.Add(c);
             //myStore.ShoppingList.Add(d);
 
@@ -41,6 +69,14 @@ namespace CarShopConsoleApp
             //Console.WriteLine("The Shopping List Total is: " + totalShoppingCost);
 
             //Console.ReadLine();
+        }
+
+        private static void printInventory(Store myStore) {
+            foreach (Car car in myStore.CarList)
+            {
+                // Console.WriteLine("Car: " + car.Make + ", " + car.Model + ", " + car.Price);
+                Console.WriteLine("Car: " + car);
+            }
         }
 
         static public int chooseAction()
