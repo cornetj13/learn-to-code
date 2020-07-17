@@ -67,8 +67,6 @@ namespace CarShopConsoleApp
             //decimal totalShoppingCost = myStore.Checkout();
 
             //Console.WriteLine("The Shopping List Total is: " + totalShoppingCost);
-
-            //Console.ReadLine();
         }
 
         private static void printInventory(Store myStore) {
