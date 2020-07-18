@@ -21,8 +21,15 @@ namespace CarShopConsoleApp
 
             int action = chooseAction();
 
+            while (action > 3 || action < 0)
+            {
+                Console.WriteLine("Sorry, this action is out of range.");
+                action = chooseAction();
+            }
+
             while (action != 0) 
             {
+                Console.WriteLine("\n");
                 Console.WriteLine("You chose action " + action);
 
                 switch (action)
@@ -34,6 +41,8 @@ namespace CarShopConsoleApp
 
                         String carMake = "";
                         String carModel = "";
+                        String carColor = "";
+                        bool carNew = false;
                         Decimal carPrice = 0;
 
                         Console.WriteLine("What is the car make? (For example: Ford, GM, Nissan, etc.)");
@@ -42,12 +51,40 @@ namespace CarShopConsoleApp
                         Console.WriteLine("What is the car model? (For example: Focus, Corvette, Sentra, etc.)");
                         carModel = Console.ReadLine();
 
-                        Console.WriteLine("What is the price of the car?");
-                        carPrice = int.Parse(Console.ReadLine());
+                        Console.WriteLine("What is the car color? (For example: Blue, White, Orange, etc.)");
+                        carColor = Console.ReadLine();
 
-                        Car newCar = new Car(carMake, carModel, carPrice);
+                        Console.WriteLine("Is the car new? (yes or no)");
+                        string carNewString = Console.ReadLine();
+                        if (carNewString == "yes")
+                        {
+                            carNew = true;
+                        } 
+                        else if (carNewString == "no")
+                        {
+                            carNew = false;
+                        } 
+                        else 
+                        {
+                            Console.WriteLine("Invalid input, default to used car.");
+                        }
+
+                        Console.WriteLine("What is the price of the car?");
+                        try     
+                        {
+                            carPrice = int.Parse(Console.ReadLine());
+                        } 
+                        catch 
+                        {
+                            Console.WriteLine("Invalid action. Price set to $0.");
+                            Console.ReadLine();
+                        }
+                    
+
+                        Car newCar = new Car(carMake, carModel, carColor, carNew, carPrice);
                         myStore.CarList.Add(newCar);
 
+                        Console.WriteLine("\n");
                         printInventory(myStore);
 
                         break;
@@ -55,19 +92,30 @@ namespace CarShopConsoleApp
                     // Adds a Car to the Shopping List.
                     case 2:
                         Console.WriteLine("You chose to add a new car to your shopping cart.");
+                        Console.WriteLine("\n");
                         printInventory(myStore);
+                        Console.WriteLine("\n");
                         Console.WriteLine("Which car(s) would you like to purchase? (Input car's number to add.)");
                         
-                        int carChosen = int.Parse(Console.ReadLine());
-                        myStore.ShoppingList.Add(myStore.CarList[carChosen]);
-
-                        printShoppingCart(myStore);
+                        try 
+                        {
+                            int carChosen = int.Parse(Console.ReadLine());
+                            myStore.ShoppingList.Add(myStore.CarList[carChosen - 1]);
+                            Console.WriteLine("\n");
+                            printShoppingCart(myStore);
+                        } 
+                        catch 
+                        {
+                            Console.WriteLine("Invalid action. Try again.");
+                            Console.ReadLine();
+                        }
 
                         break;
                     
                     // Gives Total Price of Purchased Cars.
                     case 3:
                         printShoppingCart(myStore);
+                        Console.WriteLine("\n");
                         Console.WriteLine("The total cost of your cars is: " + myStore.Checkout());
                         break;
 
@@ -77,19 +125,6 @@ namespace CarShopConsoleApp
 
                 action = chooseAction();
             }
-            
-            //Car c = new Car("Wayne Industries", "Batmobile", 1340000);
-            //Car d = new Car("Ford", "Mustang", 9200);
-
-            //Console.WriteLine("Car c is as follows: " + c.Make + " " + c.Model + " " + c.Price);
-            //Console.WriteLine("Car d is as follows: " + d.Make + " " + d.Model + " " + d.Price);
-
-            //myStore.ShoppingList.Add(c);
-            //myStore.ShoppingList.Add(d);
-
-            //decimal totalShoppingCost = myStore.Checkout();
-
-            //Console.WriteLine("The Shopping List Total is: " + totalShoppingCost);
         }
 
         private static void printShoppingCart(Store myStore) 
@@ -97,7 +132,8 @@ namespace CarShopConsoleApp
             Console.WriteLine("Cars you would like to purchase:");
             for (int i = 0; i < myStore.ShoppingList.Count; i++) 
             {
-                Console.WriteLine("Car #" + i + ": " + myStore.ShoppingList[i]);
+                int j = i + 1;
+                Console.WriteLine("Car #" + j + ": " + myStore.ShoppingList[i]);
             }
         }
 
@@ -105,14 +141,15 @@ namespace CarShopConsoleApp
         {
             for (int i = 0; i < myStore.CarList.Count; i++)
             {
-                // Console.WriteLine("Car: " + car.Make + ", " + car.Model + ", " + car.Price);
-                Console.WriteLine("Car #" + i + ": " + myStore.CarList[i]);
+                int j = i + 1;
+                Console.WriteLine("Car #" + j + ": " + myStore.CarList[i]);
             }
         }
 
         static public int chooseAction()
         {
             int choice = 0;
+            Console.WriteLine("\n");
             Console.WriteLine("Choose an action:");
             Console.WriteLine("Press 0 to quit.");
             Console.WriteLine("Press 1 to add a car to your inventory.");
@@ -126,6 +163,7 @@ namespace CarShopConsoleApp
             catch 
             {
                 Console.WriteLine("Invalid action. Quitting Application.");
+                Console.ReadLine();
             }
 
             return choice;
