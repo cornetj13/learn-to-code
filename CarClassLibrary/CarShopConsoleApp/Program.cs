@@ -15,7 +15,6 @@ namespace CarShopConsoleApp
             Store myStore = new Store();
 
             // Greet User.
-            Console.WriteLine("Hey Cedrick, check this out!");  // Demo to Skeddy
             Console.WriteLine("Welcome to my car store! First, please create a car inventory.");
             Console.WriteLine("Next, choose the cars you want to buy from your inventory.");
             Console.WriteLine("Last, you can check out and see the total price you'll need to pay!");
@@ -28,6 +27,7 @@ namespace CarShopConsoleApp
 
                 switch (action)
                 {
+                    // Adds a Car to the Inventory.
                     case 1:
 
                         Console.WriteLine("You chose to add a new car to the inventory");
@@ -51,6 +51,17 @@ namespace CarShopConsoleApp
                         printInventory(myStore);
                         break;
 
+                    // Adds a Car to the Shopping List.
+                    case 2:
+                        Console.WriteLine("You chose to add a new car to your shopping cart.");
+                        printInventory(myStore);
+                        Console.WriteLine("Which car(s) would you like to purchase? (Input car's number to add.)");
+                        int carChosen = int.Parse(Console.ReadLine());
+                        myStore.ShoppingList.Add(myStore.CarList[carChosen]);
+                        printShoppingCart(myStore);
+
+                        break;
+
                 }
 
                 action = chooseAction();
@@ -70,11 +81,21 @@ namespace CarShopConsoleApp
             //Console.WriteLine("The Shopping List Total is: " + totalShoppingCost);
         }
 
-        private static void printInventory(Store myStore) {
-            foreach (Car car in myStore.CarList)
+        private static void printShoppingCart(Store myStore) 
+        {
+            Console.WriteLine("Cars you would like to purchase:");
+            for (int i = 0; i < myStore.ShoppingList.Count; i++) 
+            {
+                Console.WriteLine("Car #" + i + ": " + myStore.ShoppingList[i]);
+            }
+        }
+
+        private static void printInventory(Store myStore) 
+        {
+            for (int i = 0; i < myStore.CarList.Count; i++)
             {
                 // Console.WriteLine("Car: " + car.Make + ", " + car.Model + ", " + car.Price);
-                Console.WriteLine("Car: " + car);
+                Console.WriteLine("Car #" + i + ": " + myStore.CarList[i]);
             }
         }
 
