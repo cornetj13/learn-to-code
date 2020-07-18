@@ -49,6 +49,7 @@ namespace CarShopConsoleApp
                         myStore.CarList.Add(newCar);
 
                         printInventory(myStore);
+
                         break;
 
                     // Adds a Car to the Shopping List.
@@ -56,12 +57,22 @@ namespace CarShopConsoleApp
                         Console.WriteLine("You chose to add a new car to your shopping cart.");
                         printInventory(myStore);
                         Console.WriteLine("Which car(s) would you like to purchase? (Input car's number to add.)");
+                        
                         int carChosen = int.Parse(Console.ReadLine());
                         myStore.ShoppingList.Add(myStore.CarList[carChosen]);
+
                         printShoppingCart(myStore);
 
                         break;
+                    
+                    // Gives Total Price of Purchased Cars.
+                    case 3:
+                        printShoppingCart(myStore);
+                        Console.WriteLine("The total cost of your cars is: " + myStore.Checkout());
+                        break;
 
+                    default:
+                        break;
                 }
 
                 action = chooseAction();
