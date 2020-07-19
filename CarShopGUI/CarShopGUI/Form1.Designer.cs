@@ -24,25 +24,25 @@
         /// </summary>
         private void InitializeComponent() {
             this.createCarGroupBox = new System.Windows.Forms.GroupBox();
-            this.makeLabel = new System.Windows.Forms.Label();
-            this.modelLabel = new System.Windows.Forms.Label();
-            this.colorLabel = new System.Windows.Forms.Label();
-            this.isNewLabel = new System.Windows.Forms.Label();
-            this.priceLabel = new System.Windows.Forms.Label();
-            this.makeTextBox = new System.Windows.Forms.TextBox();
-            this.modelTextBox = new System.Windows.Forms.TextBox();
-            this.colorTextBox = new System.Windows.Forms.TextBox();
-            this.isNewTextBox = new System.Windows.Forms.TextBox();
-            this.priceTextBox = new System.Windows.Forms.TextBox();
             this.createCarButton = new System.Windows.Forms.Button();
+            this.priceTextBox = new System.Windows.Forms.TextBox();
+            this.isNewTextBox = new System.Windows.Forms.TextBox();
+            this.colorTextBox = new System.Windows.Forms.TextBox();
+            this.modelTextBox = new System.Windows.Forms.TextBox();
+            this.makeTextBox = new System.Windows.Forms.TextBox();
+            this.priceLabel = new System.Windows.Forms.Label();
+            this.isNewLabel = new System.Windows.Forms.Label();
+            this.colorLabel = new System.Windows.Forms.Label();
+            this.modelLabel = new System.Windows.Forms.Label();
+            this.makeLabel = new System.Windows.Forms.Label();
             this.carInventoryGroupBox = new System.Windows.Forms.GroupBox();
             this.carInventoryListBox = new System.Windows.Forms.ListBox();
             this.shoppingCartListBox = new System.Windows.Forms.ListBox();
             this.addToCartButton = new System.Windows.Forms.Button();
             this.shoppingCartGroupBox = new System.Windows.Forms.GroupBox();
-            this.totalPriceButton = new System.Windows.Forms.Button();
-            this.totalLabel = new System.Windows.Forms.Label();
             this.totalListBox = new System.Windows.Forms.ListBox();
+            this.totalLabel = new System.Windows.Forms.Label();
+            this.totalPriceButton = new System.Windows.Forms.Button();
             this.createCarGroupBox.SuspendLayout();
             this.carInventoryGroupBox.SuspendLayout();
             this.shoppingCartGroupBox.SuspendLayout();
@@ -68,41 +68,50 @@
             this.createCarGroupBox.TabStop = false;
             this.createCarGroupBox.Text = "Create a Car:";
             // 
-            // makeLabel
+            // createCarButton
             // 
-            this.makeLabel.AutoSize = true;
-            this.makeLabel.Location = new System.Drawing.Point(7, 34);
-            this.makeLabel.Name = "makeLabel";
-            this.makeLabel.Size = new System.Drawing.Size(37, 13);
-            this.makeLabel.TabIndex = 0;
-            this.makeLabel.Text = "Make:";
+            this.createCarButton.Location = new System.Drawing.Point(66, 319);
+            this.createCarButton.Name = "createCarButton";
+            this.createCarButton.Size = new System.Drawing.Size(75, 23);
+            this.createCarButton.TabIndex = 17;
+            this.createCarButton.Text = "Create Car";
+            this.createCarButton.UseVisualStyleBackColor = true;
+            this.createCarButton.Click += new System.EventHandler(this.createCarButton_Click);
             // 
-            // modelLabel
+            // priceTextBox
             // 
-            this.modelLabel.AutoSize = true;
-            this.modelLabel.Location = new System.Drawing.Point(7, 86);
-            this.modelLabel.Name = "modelLabel";
-            this.modelLabel.Size = new System.Drawing.Size(39, 13);
-            this.modelLabel.TabIndex = 1;
-            this.modelLabel.Text = "Model:";
+            this.priceTextBox.Location = new System.Drawing.Point(99, 239);
+            this.priceTextBox.Name = "priceTextBox";
+            this.priceTextBox.Size = new System.Drawing.Size(86, 20);
+            this.priceTextBox.TabIndex = 16;
             // 
-            // colorLabel
+            // isNewTextBox
             // 
-            this.colorLabel.AutoSize = true;
-            this.colorLabel.Location = new System.Drawing.Point(7, 138);
-            this.colorLabel.Name = "colorLabel";
-            this.colorLabel.Size = new System.Drawing.Size(34, 13);
-            this.colorLabel.TabIndex = 4;
-            this.colorLabel.Text = "Color:";
+            this.isNewTextBox.Location = new System.Drawing.Point(99, 187);
+            this.isNewTextBox.Name = "isNewTextBox";
+            this.isNewTextBox.Size = new System.Drawing.Size(86, 20);
+            this.isNewTextBox.TabIndex = 14;
             // 
-            // isNewLabel
+            // colorTextBox
             // 
-            this.isNewLabel.AutoSize = true;
-            this.isNewLabel.Location = new System.Drawing.Point(7, 190);
-            this.isNewLabel.Name = "isNewLabel";
-            this.isNewLabel.Size = new System.Drawing.Size(72, 13);
-            this.isNewLabel.TabIndex = 6;
-            this.isNewLabel.Text = "New or Used:";
+            this.colorTextBox.Location = new System.Drawing.Point(99, 135);
+            this.colorTextBox.Name = "colorTextBox";
+            this.colorTextBox.Size = new System.Drawing.Size(86, 20);
+            this.colorTextBox.TabIndex = 13;
+            // 
+            // modelTextBox
+            // 
+            this.modelTextBox.Location = new System.Drawing.Point(99, 83);
+            this.modelTextBox.Name = "modelTextBox";
+            this.modelTextBox.Size = new System.Drawing.Size(86, 20);
+            this.modelTextBox.TabIndex = 11;
+            // 
+            // makeTextBox
+            // 
+            this.makeTextBox.Location = new System.Drawing.Point(99, 31);
+            this.makeTextBox.Name = "makeTextBox";
+            this.makeTextBox.Size = new System.Drawing.Size(86, 20);
+            this.makeTextBox.TabIndex = 9;
             // 
             // priceLabel
             // 
@@ -113,56 +122,48 @@
             this.priceLabel.TabIndex = 8;
             this.priceLabel.Text = "Price:";
             // 
-            // makeTextBox
+            // isNewLabel
             // 
-            this.makeTextBox.Location = new System.Drawing.Point(99, 31);
-            this.makeTextBox.Name = "makeTextBox";
-            this.makeTextBox.Size = new System.Drawing.Size(86, 20);
-            this.makeTextBox.TabIndex = 9;
+            this.isNewLabel.AutoSize = true;
+            this.isNewLabel.Location = new System.Drawing.Point(7, 190);
+            this.isNewLabel.Name = "isNewLabel";
+            this.isNewLabel.Size = new System.Drawing.Size(72, 13);
+            this.isNewLabel.TabIndex = 6;
+            this.isNewLabel.Text = "New or Used:";
             // 
-            // modelTextBox
+            // colorLabel
             // 
-            this.modelTextBox.Location = new System.Drawing.Point(99, 83);
-            this.modelTextBox.Name = "modelTextBox";
-            this.modelTextBox.Size = new System.Drawing.Size(86, 20);
-            this.modelTextBox.TabIndex = 11;
+            this.colorLabel.AutoSize = true;
+            this.colorLabel.Location = new System.Drawing.Point(7, 138);
+            this.colorLabel.Name = "colorLabel";
+            this.colorLabel.Size = new System.Drawing.Size(34, 13);
+            this.colorLabel.TabIndex = 4;
+            this.colorLabel.Text = "Color:";
             // 
-            // colorTextBox
+            // modelLabel
             // 
-            this.colorTextBox.Location = new System.Drawing.Point(99, 135);
-            this.colorTextBox.Name = "colorTextBox";
-            this.colorTextBox.Size = new System.Drawing.Size(86, 20);
-            this.colorTextBox.TabIndex = 13;
+            this.modelLabel.AutoSize = true;
+            this.modelLabel.Location = new System.Drawing.Point(7, 86);
+            this.modelLabel.Name = "modelLabel";
+            this.modelLabel.Size = new System.Drawing.Size(39, 13);
+            this.modelLabel.TabIndex = 1;
+            this.modelLabel.Text = "Model:";
             // 
-            // isNewTextBox
+            // makeLabel
             // 
-            this.isNewTextBox.Location = new System.Drawing.Point(99, 187);
-            this.isNewTextBox.Name = "isNewTextBox";
-            this.isNewTextBox.Size = new System.Drawing.Size(86, 20);
-            this.isNewTextBox.TabIndex = 14;
-            // 
-            // priceTextBox
-            // 
-            this.priceTextBox.Location = new System.Drawing.Point(99, 239);
-            this.priceTextBox.Name = "priceTextBox";
-            this.priceTextBox.Size = new System.Drawing.Size(86, 20);
-            this.priceTextBox.TabIndex = 16;
-            // 
-            // createCarButton
-            // 
-            this.createCarButton.Location = new System.Drawing.Point(66, 319);
-            this.createCarButton.Name = "createCarButton";
-            this.createCarButton.Size = new System.Drawing.Size(75, 23);
-            this.createCarButton.TabIndex = 17;
-            this.createCarButton.Text = "Create Car";
-            this.createCarButton.UseVisualStyleBackColor = true;
+            this.makeLabel.AutoSize = true;
+            this.makeLabel.Location = new System.Drawing.Point(7, 34);
+            this.makeLabel.Name = "makeLabel";
+            this.makeLabel.Size = new System.Drawing.Size(37, 13);
+            this.makeLabel.TabIndex = 0;
+            this.makeLabel.Text = "Make:";
             // 
             // carInventoryGroupBox
             // 
             this.carInventoryGroupBox.Controls.Add(this.carInventoryListBox);
             this.carInventoryGroupBox.Location = new System.Drawing.Point(235, 12);
             this.carInventoryGroupBox.Name = "carInventoryGroupBox";
-            this.carInventoryGroupBox.Size = new System.Drawing.Size(200, 381);
+            this.carInventoryGroupBox.Size = new System.Drawing.Size(215, 381);
             this.carInventoryGroupBox.TabIndex = 1;
             this.carInventoryGroupBox.TabStop = false;
             this.carInventoryGroupBox.Text = "Car Inventory:";
@@ -174,7 +175,7 @@
             ""});
             this.carInventoryListBox.Location = new System.Drawing.Point(6, 20);
             this.carInventoryListBox.Name = "carInventoryListBox";
-            this.carInventoryListBox.Size = new System.Drawing.Size(188, 355);
+            this.carInventoryListBox.Size = new System.Drawing.Size(203, 355);
             this.carInventoryListBox.TabIndex = 0;
             // 
             // shoppingCartListBox
@@ -184,7 +185,7 @@
             ""});
             this.shoppingCartListBox.Location = new System.Drawing.Point(6, 20);
             this.shoppingCartListBox.Name = "shoppingCartListBox";
-            this.shoppingCartListBox.Size = new System.Drawing.Size(188, 316);
+            this.shoppingCartListBox.Size = new System.Drawing.Size(200, 316);
             this.shoppingCartListBox.TabIndex = 1;
             // 
             // addToCartButton
@@ -195,6 +196,7 @@
             this.addToCartButton.TabIndex = 18;
             this.addToCartButton.Text = "Add to Cart -->";
             this.addToCartButton.UseVisualStyleBackColor = true;
+            this.addToCartButton.Click += new System.EventHandler(this.addToCartButton_Click);
             // 
             // shoppingCartGroupBox
             // 
@@ -202,30 +204,12 @@
             this.shoppingCartGroupBox.Controls.Add(this.totalLabel);
             this.shoppingCartGroupBox.Controls.Add(this.totalPriceButton);
             this.shoppingCartGroupBox.Controls.Add(this.shoppingCartListBox);
-            this.shoppingCartGroupBox.Location = new System.Drawing.Point(579, 12);
+            this.shoppingCartGroupBox.Location = new System.Drawing.Point(567, 12);
             this.shoppingCartGroupBox.Name = "shoppingCartGroupBox";
-            this.shoppingCartGroupBox.Size = new System.Drawing.Size(200, 426);
+            this.shoppingCartGroupBox.Size = new System.Drawing.Size(212, 426);
             this.shoppingCartGroupBox.TabIndex = 19;
             this.shoppingCartGroupBox.TabStop = false;
             this.shoppingCartGroupBox.Text = "Shopping Cart:";
-            // 
-            // totalPriceButton
-            // 
-            this.totalPriceButton.Location = new System.Drawing.Point(65, 342);
-            this.totalPriceButton.Name = "totalPriceButton";
-            this.totalPriceButton.Size = new System.Drawing.Size(75, 23);
-            this.totalPriceButton.TabIndex = 20;
-            this.totalPriceButton.Text = "Checkout";
-            this.totalPriceButton.UseVisualStyleBackColor = true;
-            // 
-            // totalLabel
-            // 
-            this.totalLabel.AutoSize = true;
-            this.totalLabel.Location = new System.Drawing.Point(22, 383);
-            this.totalLabel.Name = "totalLabel";
-            this.totalLabel.Size = new System.Drawing.Size(58, 13);
-            this.totalLabel.TabIndex = 21;
-            this.totalLabel.Text = "Total Cost:";
             // 
             // totalListBox
             // 
@@ -236,6 +220,25 @@
             this.totalListBox.Name = "totalListBox";
             this.totalListBox.Size = new System.Drawing.Size(68, 17);
             this.totalListBox.TabIndex = 22;
+            // 
+            // totalLabel
+            // 
+            this.totalLabel.AutoSize = true;
+            this.totalLabel.Location = new System.Drawing.Point(22, 383);
+            this.totalLabel.Name = "totalLabel";
+            this.totalLabel.Size = new System.Drawing.Size(58, 13);
+            this.totalLabel.TabIndex = 21;
+            this.totalLabel.Text = "Total Cost:";
+            // 
+            // totalPriceButton
+            // 
+            this.totalPriceButton.Location = new System.Drawing.Point(65, 342);
+            this.totalPriceButton.Name = "totalPriceButton";
+            this.totalPriceButton.Size = new System.Drawing.Size(75, 23);
+            this.totalPriceButton.TabIndex = 20;
+            this.totalPriceButton.Text = "Checkout";
+            this.totalPriceButton.UseVisualStyleBackColor = true;
+            this.totalPriceButton.Click += new System.EventHandler(this.totalPriceButton_Click);
             // 
             // Form1
             // 
@@ -248,6 +251,7 @@
             this.Controls.Add(this.createCarGroupBox);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.createCarGroupBox.ResumeLayout(false);
             this.createCarGroupBox.PerformLayout();
             this.carInventoryGroupBox.ResumeLayout(false);
