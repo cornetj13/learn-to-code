@@ -24,15 +24,19 @@ namespace CarShopGUI {
 
         private void createCarButton_Click(object sender, EventArgs e) 
         {
+            // Translates user input into appropriate boolean.
             bool carNew = false;
             if (isNewTextBox.Text == "New" || isNewTextBox.Text == "new") 
             {
                 carNew = true;
             }
 
+            // Adds car to car inventory.
             Car car = new Car(makeTextBox.Text, modelTextBox.Text, colorTextBox.Text, carNew, decimal.Parse(priceTextBox.Text));
             myStore.CarList.Add(car);
             carInventoryBindingSource.ResetBindings(false);
+
+            // Clears input boxes.
             makeTextBox.Clear();
             modelTextBox.Clear();
             colorTextBox.Clear();
@@ -54,7 +58,12 @@ namespace CarShopGUI {
 
         private void totalPriceButton_Click(object sender, EventArgs e) 
         {
+            // Calculate total price.
+            decimal totalPrice = myStore.Checkout();
+            totalDisplayLabel.Text = "$" + totalPrice.ToString();
 
+            // Clears shopping list after checkout.
+            shoppingListBindingSource.ResetBindings(false);
         }
 
         private void Form1_Load(object sender, EventArgs e) 
@@ -66,7 +75,6 @@ namespace CarShopGUI {
             // Bind list boxes to correct binding sources.
             carInventoryListBox.DataSource = carInventoryBindingSource;
             carInventoryListBox.DisplayMember = ToString();
-
             shoppingCartListBox.DataSource = shoppingListBindingSource;
             shoppingCartListBox.DisplayMember = ToString();
         }

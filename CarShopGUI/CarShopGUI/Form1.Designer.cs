@@ -40,9 +40,9 @@
             this.shoppingCartListBox = new System.Windows.Forms.ListBox();
             this.addToCartButton = new System.Windows.Forms.Button();
             this.shoppingCartGroupBox = new System.Windows.Forms.GroupBox();
-            this.totalListBox = new System.Windows.Forms.ListBox();
             this.totalLabel = new System.Windows.Forms.Label();
             this.totalPriceButton = new System.Windows.Forms.Button();
+            this.totalDisplayLabel = new System.Windows.Forms.Label();
             this.createCarGroupBox.SuspendLayout();
             this.carInventoryGroupBox.SuspendLayout();
             this.shoppingCartGroupBox.SuspendLayout();
@@ -200,7 +200,7 @@
             // 
             // shoppingCartGroupBox
             // 
-            this.shoppingCartGroupBox.Controls.Add(this.totalListBox);
+            this.shoppingCartGroupBox.Controls.Add(this.totalDisplayLabel);
             this.shoppingCartGroupBox.Controls.Add(this.totalLabel);
             this.shoppingCartGroupBox.Controls.Add(this.totalPriceButton);
             this.shoppingCartGroupBox.Controls.Add(this.shoppingCartListBox);
@@ -210,16 +210,6 @@
             this.shoppingCartGroupBox.TabIndex = 19;
             this.shoppingCartGroupBox.TabStop = false;
             this.shoppingCartGroupBox.Text = "Shopping Cart:";
-            // 
-            // totalListBox
-            // 
-            this.totalListBox.FormattingEnabled = true;
-            this.totalListBox.Items.AddRange(new object[] {
-            "$0.00"});
-            this.totalListBox.Location = new System.Drawing.Point(111, 383);
-            this.totalListBox.Name = "totalListBox";
-            this.totalListBox.Size = new System.Drawing.Size(68, 17);
-            this.totalListBox.TabIndex = 22;
             // 
             // totalLabel
             // 
@@ -239,6 +229,15 @@
             this.totalPriceButton.Text = "Checkout";
             this.totalPriceButton.UseVisualStyleBackColor = true;
             this.totalPriceButton.Click += new System.EventHandler(this.totalPriceButton_Click);
+            // 
+            // totalDisplayLabel
+            // 
+            this.totalDisplayLabel.AutoSize = true;
+            this.totalDisplayLabel.Location = new System.Drawing.Point(108, 383);
+            this.totalDisplayLabel.Name = "totalDisplayLabel";
+            this.totalDisplayLabel.Size = new System.Drawing.Size(34, 13);
+            this.totalDisplayLabel.TabIndex = 22;
+            this.totalDisplayLabel.Text = "$0.00";
             // 
             // Form1
             // 
@@ -280,9 +279,9 @@
         private System.Windows.Forms.ListBox shoppingCartListBox;
         private System.Windows.Forms.Button addToCartButton;
         private System.Windows.Forms.GroupBox shoppingCartGroupBox;
-        private System.Windows.Forms.ListBox totalListBox;
         private System.Windows.Forms.Label totalLabel;
         private System.Windows.Forms.Button totalPriceButton;
+        private System.Windows.Forms.Label totalDisplayLabel;
     }
 }
 
