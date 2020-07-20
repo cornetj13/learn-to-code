@@ -42,7 +42,14 @@ namespace CarShopGUI {
 
         private void addToCartButton_Click(object sender, EventArgs e) 
         {
+            // Get selected item from the inventory.
+            Car selectedCar = (Car) carInventoryListBox.SelectedItem;
 
+            // Add item to shopping list.
+            myStore.ShoppingList.Add(selectedCar);
+
+            // Update the list box control.
+            shoppingListBindingSource.ResetBindings(false);  
         }
 
         private void totalPriceButton_Click(object sender, EventArgs e) 
@@ -52,9 +59,16 @@ namespace CarShopGUI {
 
         private void Form1_Load(object sender, EventArgs e) 
         {
+            // Set binding source to correct lists from myStore.
             carInventoryBindingSource.DataSource = myStore.CarList;
+            shoppingListBindingSource.DataSource = myStore.ShoppingList;
+
+            // Bind list boxes to correct binding sources.
             carInventoryListBox.DataSource = carInventoryBindingSource;
             carInventoryListBox.DisplayMember = ToString();
+
+            shoppingCartListBox.DataSource = shoppingListBindingSource;
+            shoppingCartListBox.DisplayMember = ToString();
         }
     }
 }

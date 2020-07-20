@@ -14,22 +14,22 @@ namespace CarClassLibrary {
             ShoppingList = new List<Car>();
         }
 
-        // Method for Getting Total Price of Cars in Shopping List.
+        // Method for getting total price of cars in the shopping list.
         public decimal Checkout()
         {
-            // Initialize Total Cost.
+            // Initialize total cost.
             decimal totalCost = 0;
 
-            // Add Price of Car in Shopping List.
+            // Add price of car in shopping list.
             foreach (var c in ShoppingList)
             {
                 totalCost += c.Price;
             }
 
-            // Clear Shopping List to Reset after Checkout.
+            // Clear shopping list to reset after checkout.
             ShoppingList.Clear();
 
-            // Return Cost of Cars in Shopping List.
+            // Return cost of cars in shopping list.
             return totalCost;
         }
     }
