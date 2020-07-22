@@ -40,9 +40,9 @@
             this.shoppingCartListBox = new System.Windows.Forms.ListBox();
             this.addToCartButton = new System.Windows.Forms.Button();
             this.shoppingCartGroupBox = new System.Windows.Forms.GroupBox();
+            this.totalDisplayLabel = new System.Windows.Forms.Label();
             this.totalLabel = new System.Windows.Forms.Label();
             this.totalPriceButton = new System.Windows.Forms.Button();
-            this.totalDisplayLabel = new System.Windows.Forms.Label();
             this.createCarGroupBox.SuspendLayout();
             this.carInventoryGroupBox.SuspendLayout();
             this.shoppingCartGroupBox.SuspendLayout();
@@ -63,7 +63,7 @@
             this.createCarGroupBox.Controls.Add(this.makeLabel);
             this.createCarGroupBox.Location = new System.Drawing.Point(12, 12);
             this.createCarGroupBox.Name = "createCarGroupBox";
-            this.createCarGroupBox.Size = new System.Drawing.Size(202, 381);
+            this.createCarGroupBox.Size = new System.Drawing.Size(202, 426);
             this.createCarGroupBox.TabIndex = 0;
             this.createCarGroupBox.TabStop = false;
             this.createCarGroupBox.Text = "Create a Car:";
@@ -163,7 +163,7 @@
             this.carInventoryGroupBox.Controls.Add(this.carInventoryListBox);
             this.carInventoryGroupBox.Location = new System.Drawing.Point(235, 12);
             this.carInventoryGroupBox.Name = "carInventoryGroupBox";
-            this.carInventoryGroupBox.Size = new System.Drawing.Size(215, 381);
+            this.carInventoryGroupBox.Size = new System.Drawing.Size(215, 426);
             this.carInventoryGroupBox.TabIndex = 1;
             this.carInventoryGroupBox.TabStop = false;
             this.carInventoryGroupBox.Text = "Car Inventory:";
@@ -175,7 +175,7 @@
             ""});
             this.carInventoryListBox.Location = new System.Drawing.Point(6, 20);
             this.carInventoryListBox.Name = "carInventoryListBox";
-            this.carInventoryListBox.Size = new System.Drawing.Size(203, 355);
+            this.carInventoryListBox.Size = new System.Drawing.Size(203, 394);
             this.carInventoryListBox.TabIndex = 0;
             // 
             // shoppingCartListBox
@@ -211,10 +211,19 @@
             this.shoppingCartGroupBox.TabStop = false;
             this.shoppingCartGroupBox.Text = "Shopping Cart:";
             // 
+            // totalDisplayLabel
+            // 
+            this.totalDisplayLabel.AutoSize = true;
+            this.totalDisplayLabel.Location = new System.Drawing.Point(119, 393);
+            this.totalDisplayLabel.Name = "totalDisplayLabel";
+            this.totalDisplayLabel.Size = new System.Drawing.Size(34, 13);
+            this.totalDisplayLabel.TabIndex = 22;
+            this.totalDisplayLabel.Text = "$0.00";
+            // 
             // totalLabel
             // 
             this.totalLabel.AutoSize = true;
-            this.totalLabel.Location = new System.Drawing.Point(22, 383);
+            this.totalLabel.Location = new System.Drawing.Point(55, 393);
             this.totalLabel.Name = "totalLabel";
             this.totalLabel.Size = new System.Drawing.Size(58, 13);
             this.totalLabel.TabIndex = 21;
@@ -222,7 +231,7 @@
             // 
             // totalPriceButton
             // 
-            this.totalPriceButton.Location = new System.Drawing.Point(65, 342);
+            this.totalPriceButton.Location = new System.Drawing.Point(69, 352);
             this.totalPriceButton.Name = "totalPriceButton";
             this.totalPriceButton.Size = new System.Drawing.Size(75, 23);
             this.totalPriceButton.TabIndex = 20;
@@ -230,17 +239,9 @@
             this.totalPriceButton.UseVisualStyleBackColor = true;
             this.totalPriceButton.Click += new System.EventHandler(this.totalPriceButton_Click);
             // 
-            // totalDisplayLabel
-            // 
-            this.totalDisplayLabel.AutoSize = true;
-            this.totalDisplayLabel.Location = new System.Drawing.Point(108, 383);
-            this.totalDisplayLabel.Name = "totalDisplayLabel";
-            this.totalDisplayLabel.Size = new System.Drawing.Size(34, 13);
-            this.totalDisplayLabel.TabIndex = 22;
-            this.totalDisplayLabel.Text = "$0.00";
-            // 
             // Form1
             // 
+            this.AcceptButton = this.createCarButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);

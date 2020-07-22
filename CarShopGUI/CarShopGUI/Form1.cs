@@ -31,8 +31,18 @@ namespace CarShopGUI {
                 carNew = true;
             }
 
+            decimal carPrice;
+            try 
+            {
+                carPrice = decimal.Parse(priceTextBox.Text);
+            } 
+            catch 
+            {
+                carPrice = 0;
+            }
+
             // Adds car to car inventory.
-            Car car = new Car(makeTextBox.Text, modelTextBox.Text, colorTextBox.Text, carNew, decimal.Parse(priceTextBox.Text));
+            Car car = new Car(makeTextBox.Text, modelTextBox.Text, colorTextBox.Text, carNew, carPrice);
             myStore.CarList.Add(car);
             carInventoryBindingSource.ResetBindings(false);
 
@@ -42,6 +52,8 @@ namespace CarShopGUI {
             colorTextBox.Clear();
             isNewTextBox.Clear();
             priceTextBox.Clear();
+
+            this.ActiveControl = makeTextBox;
         }
 
         private void addToCartButton_Click(object sender, EventArgs e) 
