@@ -1,0 +1,7 @@
+C:\Users\Admin\CSharp\AnimalClasses\AnimalClasses\bin\Debug\AnimalClasses.exe.config
+C:\Users\Admin\CSharp\AnimalClasses\AnimalClasses\bin\Debug\AnimalClasses.exe
+C:\Users\Admin\CSharp\AnimalClasses\AnimalClasses\bin\Debug\AnimalClasses.pdb
+C:\Users\Admin\CSharp\AnimalClasses\AnimalClasses\obj\Debug\AnimalClasses.csprojAssemblyReference.cache
+C:\Users\Admin\CSharp\AnimalClasses\AnimalClasses\obj\Debug\AnimalClasses.csproj.CoreCompileInputs.cache
+C:\Users\Admin\CSharp\AnimalClasses\AnimalClasses\obj\Debug\AnimalClasses.exe
+C:\Users\Admin\CSharp\AnimalClasses\AnimalClasses\obj\Debug\AnimalClasses.pdb
