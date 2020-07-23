@@ -1,0 +1,10 @@
+C:\Users\Admin\CSharp\ChessBoardConsoleApp\ChessBoardConsoleApp\bin\Debug\ChessBoardConsoleApp.exe.config
+C:\Users\Admin\CSharp\ChessBoardConsoleApp\ChessBoardConsoleApp\bin\Debug\ChessBoardConsoleApp.exe
+C:\Users\Admin\CSharp\ChessBoardConsoleApp\ChessBoardConsoleApp\bin\Debug\ChessBoardConsoleApp.pdb
+C:\Users\Admin\CSharp\ChessBoardConsoleApp\ChessBoardConsoleApp\bin\Debug\ChessBoardModel.dll
+C:\Users\Admin\CSharp\ChessBoardConsoleApp\ChessBoardConsoleApp\bin\Debug\ChessBoardModel.pdb
+C:\Users\Admin\CSharp\ChessBoardConsoleApp\ChessBoardConsoleApp\obj\Debug\ChessBoardConsoleApp.csprojAssemblyReference.cache
+C:\Users\Admin\CSharp\ChessBoardConsoleApp\ChessBoardConsoleApp\obj\Debug\ChessBoardConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\Admin\CSharp\ChessBoardConsoleApp\ChessBoardConsoleApp\obj\Debug\ChessBoardConsoleApp.csproj.CopyComplete
+C:\Users\Admin\CSharp\ChessBoardConsoleApp\ChessBoardConsoleApp\obj\Debug\ChessBoardConsoleApp.exe
+C:\Users\Admin\CSharp\ChessBoardConsoleApp\ChessBoardConsoleApp\obj\Debug\ChessBoardConsoleApp.pdb
