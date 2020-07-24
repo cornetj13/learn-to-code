@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ChessBoardModel {
-    public class Board {
+namespace ChessBoardModel 
+{
+    public class Board 
+    {
         // Size of the board (usually 8x8).
         public int Size { get; set; }
+
         // 2D array of the grid (type Cell).
         public Cell[,] theGrid { get; set; }
 
@@ -13,7 +16,7 @@ namespace ChessBoardModel {
         public Board(int size) 
         {
             // Board size.
-            Size = size + 2;
+            Size = size;
 
             // Create a new 2D array (type Cell).
             theGrid = new Cell[Size, Size];
@@ -172,18 +175,21 @@ namespace ChessBoardModel {
                     break;
             }
 
-            // Show piece by setting currently occupied space (by piece) to true).
+            // Step 3: show piece by setting currently occupied space (by piece) to true).
             theGrid[currentCell.RowNumber, currentCell.ColumnNumber].CurrentlyOccupied = true;
 
-            // Step 3: Mark the appropriate cells as "Legal".
         }
 
         private bool Inbounds(int row, int col) 
         {
-            if ((row < 0 || row > 8) || (col < 0 || col > 8))
+            if (row < 0 || row > Size - 1)
             {
                 return false;
             } 
+            else if (col < 0 || col > Size - 1) 
+            {
+                return false;
+            }
             else 
             {
                 return true;

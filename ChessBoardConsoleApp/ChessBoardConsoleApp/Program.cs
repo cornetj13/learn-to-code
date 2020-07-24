@@ -63,7 +63,7 @@ namespace ChessBoardConsoleApp
                 try 
                 {
                     currentRow = int.Parse(currentRowString) - 1;
-                    if (currentRow >= 0 && currentRow <= myBoard.Size - 3) 
+                    if (currentRow >= 0 && currentRow <= myBoard.Size - 1) 
                     { 
                         validRow = true; 
                     } 
@@ -84,7 +84,7 @@ namespace ChessBoardConsoleApp
                 try 
                 {
                     currentColumn = int.Parse(currentColumnString) - 1;
-                    if (currentColumn >= 0 && currentColumn <= myBoard.Size - 3)
+                    if (currentColumn >= 0 && currentColumn <= myBoard.Size - 1)
                     {
                         validColumn = true;
                     } 
@@ -111,9 +111,9 @@ namespace ChessBoardConsoleApp
             Console.WriteLine("+---+---+---+---+---+---+---+---+");
 
             // Print the chess board to the console (Note: X = piece, + = legal move, . = empty cell).
-            for (int i = 0; i < myBoard.Size - 2; i++) 
+            for (int i = 0; i < myBoard.Size; i++) 
             {
-                for (int j = 0; j < myBoard.Size - 2; j++)
+                for (int j = 0; j < myBoard.Size; j++)
                 {
                     Cell c = myBoard.theGrid[i, j];
 

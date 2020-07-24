@@ -1,0 +1,9 @@
+C:\Users\Admin\CSharp\MinesweeperGameConsoleApp\MinesweeperModel\bin\Debug\netstandard2.0\MinesweeperModel.deps.json
+C:\Users\Admin\CSharp\MinesweeperGameConsoleApp\MinesweeperModel\bin\Debug\netstandard2.0\MinesweeperModel.dll
+C:\Users\Admin\CSharp\MinesweeperGameConsoleApp\MinesweeperModel\bin\Debug\netstandard2.0\MinesweeperModel.pdb
+C:\Users\Admin\CSharp\MinesweeperGameConsoleApp\MinesweeperModel\obj\Debug\netstandard2.0\MinesweeperModel.csprojAssemblyReference.cache
+C:\Users\Admin\CSharp\MinesweeperGameConsoleApp\MinesweeperModel\obj\Debug\netstandard2.0\MinesweeperModel.csproj.CoreCompileInputs.cache
+C:\Users\Admin\CSharp\MinesweeperGameConsoleApp\MinesweeperModel\obj\Debug\netstandard2.0\MinesweeperModel.AssemblyInfoInputs.cache
+C:\Users\Admin\CSharp\MinesweeperGameConsoleApp\MinesweeperModel\obj\Debug\netstandard2.0\MinesweeperModel.AssemblyInfo.cs
+C:\Users\Admin\CSharp\MinesweeperGameConsoleApp\MinesweeperModel\obj\Debug\netstandard2.0\MinesweeperModel.dll
+C:\Users\Admin\CSharp\MinesweeperGameConsoleApp\MinesweeperModel\obj\Debug\netstandard2.0\MinesweeperModel.pdb

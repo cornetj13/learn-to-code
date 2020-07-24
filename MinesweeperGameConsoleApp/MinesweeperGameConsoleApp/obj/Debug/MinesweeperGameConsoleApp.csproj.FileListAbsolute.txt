@@ -1,0 +1,10 @@
+C:\Users\Admin\CSharp\MinesweeperGameConsoleApp\MinesweeperGameConsoleApp\bin\Debug\MinesweeperGameConsoleApp.exe.config
+C:\Users\Admin\CSharp\MinesweeperGameConsoleApp\MinesweeperGameConsoleApp\bin\Debug\MinesweeperGameConsoleApp.exe
+C:\Users\Admin\CSharp\MinesweeperGameConsoleApp\MinesweeperGameConsoleApp\bin\Debug\MinesweeperGameConsoleApp.pdb
+C:\Users\Admin\CSharp\MinesweeperGameConsoleApp\MinesweeperGameConsoleApp\bin\Debug\MinesweeperModel.dll
+C:\Users\Admin\CSharp\MinesweeperGameConsoleApp\MinesweeperGameConsoleApp\bin\Debug\MinesweeperModel.pdb
+C:\Users\Admin\CSharp\MinesweeperGameConsoleApp\MinesweeperGameConsoleApp\obj\Debug\MinesweeperGameConsoleApp.csprojAssemblyReference.cache
+C:\Users\Admin\CSharp\MinesweeperGameConsoleApp\MinesweeperGameConsoleApp\obj\Debug\MinesweeperGameConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\Admin\CSharp\MinesweeperGameConsoleApp\MinesweeperGameConsoleApp\obj\Debug\MinesweeperGameConsoleApp.csproj.CopyComplete
+C:\Users\Admin\CSharp\MinesweeperGameConsoleApp\MinesweeperGameConsoleApp\obj\Debug\MinesweeperGameConsoleApp.exe
+C:\Users\Admin\CSharp\MinesweeperGameConsoleApp\MinesweeperGameConsoleApp\obj\Debug\MinesweeperGameConsoleApp.pdb
