@@ -74,10 +74,21 @@ namespace MinesweeperGameConsoleApp
             {
                 // Prompt user for place to visit.
                 Cell currentCell = checkCurrentCell(myBoard);
+
+                // Counts towards progress if first visit.
+                if (currentCell.Visited == false) 
+                { 
+                    winningMoves--; 
+                }
+
+                // Marks cell has been visited before.
                 currentCell.Visited = true;
 
                 // Show the updated Minesweeper board.
                 printBoard(myBoard);
+
+                // Tells user how many bombs to go.
+                Console.WriteLine("Spots to clear: " + winningMoves);
 
                 // Checks if location contains bomb.
                 if (currentCell.ContainsBomb == true)
@@ -95,7 +106,6 @@ namespace MinesweeperGameConsoleApp
                 else
                 {
                     gameFinished = false;
-                    winningMoves--;
                 }
  
             }
@@ -236,8 +246,6 @@ namespace MinesweeperGameConsoleApp
                     Console.WriteLine("Invalid input for column (integer only).");
                 }
             }
-
-            myBoard.theGrid[currentRow, currentColumn].Visited = true;
             return myBoard.theGrid[currentRow, currentColumn];
         }
     }
