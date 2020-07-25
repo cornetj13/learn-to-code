@@ -34,12 +34,16 @@ namespace MinesweeperModel
                 for (int j = 0; j < Size; j++) 
                 {
                     theGrid[i, j] = new Cell(i, j);
+                    theGrid[i, j].Visited = false;
                 }
             }
         }
 
-        public void PlantBombs() 
+        public int PlantBombs() 
         {
+            // Counts bombs
+            int bombCount = 0;
+
             // Plants bombs randomly on cells.
             for (int i = 0; i < Size; i++) 
             {
@@ -56,9 +60,12 @@ namespace MinesweeperModel
                     else if (randomNumber <= Difficulty)
                     {
                         theGrid[i, j].ContainsBomb = true;
+                        bombCount++;
                     }  
                 }
             }
+
+            return bombCount;
         }
 
         public int CalculateLiveNeighbors(int row, int col)

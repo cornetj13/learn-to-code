@@ -10,7 +10,6 @@ namespace MinesweeperModel
         public int ColumnNumber { get; set; }
         public int LiveNeighbors { get; set; }
         public bool Visited { get; set; }
-
         public bool ContainsBomb { get; set; }
 
         public Cell(int x, int y) 
