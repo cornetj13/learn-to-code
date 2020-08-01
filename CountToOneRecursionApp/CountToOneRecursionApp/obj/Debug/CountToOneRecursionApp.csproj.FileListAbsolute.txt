@@ -1,0 +1,7 @@
+C:\Users\Admin\CSharp\CountToOneRecursionApp\CountToOneRecursionApp\bin\Debug\CountToOneRecursionApp.exe.config
+C:\Users\Admin\CSharp\CountToOneRecursionApp\CountToOneRecursionApp\bin\Debug\CountToOneRecursionApp.exe
+C:\Users\Admin\CSharp\CountToOneRecursionApp\CountToOneRecursionApp\bin\Debug\CountToOneRecursionApp.pdb
+C:\Users\Admin\CSharp\CountToOneRecursionApp\CountToOneRecursionApp\obj\Debug\CountToOneRecursionApp.csprojAssemblyReference.cache
+C:\Users\Admin\CSharp\CountToOneRecursionApp\CountToOneRecursionApp\obj\Debug\CountToOneRecursionApp.csproj.CoreCompileInputs.cache
+C:\Users\Admin\CSharp\CountToOneRecursionApp\CountToOneRecursionApp\obj\Debug\CountToOneRecursionApp.exe
+C:\Users\Admin\CSharp\CountToOneRecursionApp\CountToOneRecursionApp\obj\Debug\CountToOneRecursionApp.pdb
