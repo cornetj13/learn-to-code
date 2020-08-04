@@ -66,12 +66,40 @@ namespace CandyCrush
         {
             MyButton button = (MyButton) sender;
             originalColor = button.BackColor;
-            floddFill(button.row, button.col);
+            floodFill(button.row, button.col);
         }
 
-        private void floddFill(int r, int c) 
+        private void resetButton_Click(object sender, EventArgs e) 
         {
-            buttonGrid[r, c].BackColor = currentColor;
+            mainPanel.Controls.Clear();
+            populateGrid();
+        }
+
+        private void floodFill(int r, int c) 
+        {
+            if (isValid(r, c) && buttonGrid[r, c].BackColor.Equals(originalColor)) 
+            {
+                // Change the current cell clicked.
+                buttonGrid[r, c].BackColor = currentColor;
+
+                // Apply to the cell to the right (r + 1), the left (r - 1), below (c + 1), and above (c - 1).
+                floodFill(r + 1, c);
+                floodFill(r - 1, c);
+                floodFill(r, c + 1);
+                floodFill(r, c - 1);
+            }
+        }
+
+        private bool isValid(int r, int c)
+        {
+            if (r < 0 || r >= rows || c < 0 || c >= cols)
+            {
+                return false;
+            } 
+            else 
+            { 
+                return true; 
+            }
         }
     }
 }
