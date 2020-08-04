@@ -1,0 +1,10 @@
+C:\Users\Admin\CSharp\CandyCrush\CandyCrush\bin\Debug\CandyCrush.exe.config
+C:\Users\Admin\CSharp\CandyCrush\CandyCrush\bin\Debug\CandyCrush.exe
+C:\Users\Admin\CSharp\CandyCrush\CandyCrush\bin\Debug\CandyCrush.pdb
+C:\Users\Admin\CSharp\CandyCrush\CandyCrush\obj\Debug\CandyCrush.csprojAssemblyReference.cache
+C:\Users\Admin\CSharp\CandyCrush\CandyCrush\obj\Debug\CandyCrush.Form1.resources
+C:\Users\Admin\CSharp\CandyCrush\CandyCrush\obj\Debug\CandyCrush.Properties.Resources.resources
+C:\Users\Admin\CSharp\CandyCrush\CandyCrush\obj\Debug\CandyCrush.csproj.GenerateResource.cache
+C:\Users\Admin\CSharp\CandyCrush\CandyCrush\obj\Debug\CandyCrush.csproj.CoreCompileInputs.cache
+C:\Users\Admin\CSharp\CandyCrush\CandyCrush\obj\Debug\CandyCrush.exe
+C:\Users\Admin\CSharp\CandyCrush\CandyCrush\obj\Debug\CandyCrush.pdb
