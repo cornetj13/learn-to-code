@@ -1,6 +1,7 @@
 ﻿using MinesweeperModel;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -81,8 +82,11 @@ namespace MinesweeperGameConsoleApp
                     winningMoves--; 
                 }
 
+                // Flood fills if cell has no live neightbors.
+                floodFill(myBoard, currentCell.RowNumber, currentCell.ColumnNumber, boardSize);
+
                 // Marks cell has been visited before.
-                currentCell.Visited = true;
+                // currentCell.Visited = true;         ---- STILL NEEDED?
 
                 // Show the updated Minesweeper board.
                 printBoard(myBoard);
@@ -247,6 +251,44 @@ namespace MinesweeperGameConsoleApp
                 }
             }
             return myBoard.theGrid[currentRow, currentColumn];
+        }
+
+        private static void floodFill(Board myBoard, int r, int c, int boardSize) 
+        {
+            Debug.WriteLine("Row Number: " + r);
+            Debug.WriteLine("Column Number: " + c);
+            Debug.WriteLine("Valid: " + isValid(r, c, boardSize));
+
+            if (isValid(r, c, boardSize) == true && myBoard.theGrid[r, c].Visited == false) 
+            {
+                Cell cell = myBoard.theGrid[r, c];
+                cell.LiveNeighbors = myBoard.CalculateLiveNeighbors(r, c);
+                Debug.WriteLine("Live Neighbors: " + cell.LiveNeighbors);
+
+                // Reveals empty cell
+                cell.Visited = true;
+
+                if (cell.LiveNeighbors == 0) 
+                 {
+                    // Checks if surrounding cells are also empty
+                    floodFill(myBoard, r + 1, c, boardSize);
+                    floodFill(myBoard, r - 1, c, boardSize);
+                    floodFill(myBoard, r, c + 1, boardSize);
+                    floodFill(myBoard, r, c - 1, boardSize);
+                }
+            }
+        }
+
+        private static bool isValid(int r, int c, int boardSize) 
+        {
+            if (r < 0 || r >= boardSize || c < 0 || c >= boardSize)
+            {
+                return false;
+            } 
+            else 
+            {
+                return true;
+            }
         }
     }
 }
