@@ -12,7 +12,6 @@ namespace CandyCrush
     {
         public static Color[] myColors = { Color.Red, Color.Blue, Color.Green, Color.Yellow, Color.Orange, Color.Aqua, Color.Lime, Color.Fuchsia };
 
-
         static Random random = new Random();
 
         public static int buttonSize = 25;

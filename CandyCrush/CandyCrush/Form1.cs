@@ -15,7 +15,13 @@ namespace CandyCrush
 
         private MyButton[,] buttonGrid;
         private Color currentColor, originalColor;
-        private int rows, cols;
+        private int rows, cols, totalButtons;
+        private int turns = 40;
+        private int changedButtons = 0;
+
+        public static Color[] myColors = { Color.Red, Color.Blue, Color.Green, Color.Yellow, Color.Orange, Color.Aqua, Color.Lime, Color.Fuchsia };
+
+        static Random random = new Random();
 
         public Form1() 
         {
@@ -25,11 +31,14 @@ namespace CandyCrush
 
         public void populateGrid() 
         {
-            int x, y = 0;
+            // Reset turns.
+            turns = 40;
+            changedButtons = 0;
 
             // Calculate the number of rows and columns based on the size of the panel and button.
             cols = mainPanel.Height / MyButton.buttonSize;
             rows = mainPanel.Width / MyButton.buttonSize;
+            totalButtons = cols * rows;
 
             // new 2D array of buttons.
             buttonGrid = new MyButton[rows, cols];
@@ -53,6 +62,9 @@ namespace CandyCrush
                     buttonGrid[r, c].Location = new Point(r * MyButton.buttonSize, c * MyButton.buttonSize);
                 }
             }
+
+            // Display turns.
+            clicksLeftLabel.Text = turns.ToString();
         }
 
         private void colorbutton_Click(object sender, EventArgs e) 
@@ -67,17 +79,71 @@ namespace CandyCrush
             MyButton button = (MyButton) sender;
             originalColor = button.BackColor;
             floodFill(button.row, button.col);
+
+            // Calculate and display turns.
+            if (currentColor != originalColor) 
+            {
+                turns = turns - 1;
+                changedButtons = changedButtons + 1;
+                clicksLeftLabel.Text = turns.ToString();
+            }
+
+            // Check if player has won and if so, display winninging message.
+            int similarButtons = 0;
+            bool isWinning = false;
+            for (int i = 0; i < rows; i++) {
+                for (int j = 0; j < cols; j++) {
+                    if (buttonGrid[i, j].BackColor == currentColor)
+                    {
+                        similarButtons++;
+                    }
+                }
+            }
+            if (similarButtons == totalButtons)
+            {
+                isWinning = true;
+                MessageBox.Show("You Win!!");
+                mainPanel.Controls.Clear();
+                turns = 40;
+                changedButtons = 0;
+                populateGrid();
+            }
+
+            // Check if player has lost and if so, display losing message.
+            if (turns == 0 && isWinning == false) 
+            {
+                MessageBox.Show("Sorry, you lose!");
+                mainPanel.Controls.Clear();
+                turns = 40;
+                changedButtons = 0;
+                populateGrid();
+            }
+
+            // Add random color change.
+            for (int i = 0; i < changedButtons % 4; i++) 
+            {
+                if (turns > 8)
+                {
+                    int x = random.Next() % rows;
+                    int y = random.Next() % cols;
+
+                    int randomColor = random.Next() % myColors.Length; ;
+                    buttonGrid[x, y].BackColor = myColors[randomColor];
+                }
+            }
         }
 
         private void resetButton_Click(object sender, EventArgs e) 
         {
             mainPanel.Controls.Clear();
+            turns = 40;
+            changedButtons = 0;
             populateGrid();
         }
 
         private void floodFill(int r, int c) 
         {
-            if (isValid(r, c) && buttonGrid[r, c].BackColor.Equals(originalColor)) 
+            if (isValid(r, c) && buttonGrid[r, c].BackColor.Equals(originalColor) && buttonGrid[r, c].BackColor != currentColor)
             {
                 // Change the current cell clicked.
                 buttonGrid[r, c].BackColor = currentColor;

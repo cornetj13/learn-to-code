@@ -34,6 +34,8 @@
             this.limeButton = new System.Windows.Forms.Button();
             this.resetButton = new System.Windows.Forms.Button();
             this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.clickLabel = new System.Windows.Forms.Label();
+            this.clicksLeftLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,9 +119,9 @@
             // limeButton
             // 
             this.limeButton.BackColor = System.Drawing.Color.Lime;
-            this.limeButton.Location = new System.Drawing.Point(578, 224);
+            this.limeButton.Location = new System.Drawing.Point(578, 219);
             this.limeButton.Name = "limeButton";
-            this.limeButton.Size = new System.Drawing.Size(97, 63);
+            this.limeButton.Size = new System.Drawing.Size(97, 72);
             this.limeButton.TabIndex = 8;
             this.limeButton.UseVisualStyleBackColor = false;
             this.limeButton.Click += new System.EventHandler(this.colorbutton_Click);
@@ -138,15 +140,35 @@
             // 
             this.pictureBox.Location = new System.Drawing.Point(578, 294);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(210, 77);
+            this.pictureBox.Size = new System.Drawing.Size(210, 40);
             this.pictureBox.TabIndex = 10;
             this.pictureBox.TabStop = false;
+            // 
+            // clickLabel
+            // 
+            this.clickLabel.AutoSize = true;
+            this.clickLabel.Location = new System.Drawing.Point(609, 348);
+            this.clickLabel.Name = "clickLabel";
+            this.clickLabel.Size = new System.Drawing.Size(66, 13);
+            this.clickLabel.TabIndex = 11;
+            this.clickLabel.Text = "Clicks Used:";
+            // 
+            // clicksLeftLabel
+            // 
+            this.clicksLeftLabel.AutoSize = true;
+            this.clicksLeftLabel.Location = new System.Drawing.Point(735, 348);
+            this.clicksLeftLabel.Name = "clicksLeftLabel";
+            this.clicksLeftLabel.Size = new System.Drawing.Size(13, 13);
+            this.clicksLeftLabel.TabIndex = 12;
+            this.clicksLeftLabel.Text = "0";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.clicksLeftLabel);
+            this.Controls.Add(this.clickLabel);
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.redButton);
             this.Controls.Add(this.limeButton);
@@ -162,6 +184,7 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -178,6 +201,8 @@
         private System.Windows.Forms.Button limeButton;
         private System.Windows.Forms.Button resetButton;
         private System.Windows.Forms.PictureBox pictureBox;
+        private System.Windows.Forms.Label clickLabel;
+        private System.Windows.Forms.Label clicksLeftLabel;
     }
 }
 
