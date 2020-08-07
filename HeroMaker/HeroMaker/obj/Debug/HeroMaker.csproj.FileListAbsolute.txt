@@ -1,0 +1,10 @@
+C:\Users\Admin\CSharp\HeroMaker\HeroMaker\bin\Debug\HeroMaker.exe.config
+C:\Users\Admin\CSharp\HeroMaker\HeroMaker\bin\Debug\HeroMaker.exe
+C:\Users\Admin\CSharp\HeroMaker\HeroMaker\bin\Debug\HeroMaker.pdb
+C:\Users\Admin\CSharp\HeroMaker\HeroMaker\obj\Debug\HeroMaker.csprojAssemblyReference.cache
+C:\Users\Admin\CSharp\HeroMaker\HeroMaker\obj\Debug\HeroMaker.Form1.resources
+C:\Users\Admin\CSharp\HeroMaker\HeroMaker\obj\Debug\HeroMaker.Properties.Resources.resources
+C:\Users\Admin\CSharp\HeroMaker\HeroMaker\obj\Debug\HeroMaker.csproj.GenerateResource.cache
+C:\Users\Admin\CSharp\HeroMaker\HeroMaker\obj\Debug\HeroMaker.csproj.CoreCompileInputs.cache
+C:\Users\Admin\CSharp\HeroMaker\HeroMaker\obj\Debug\HeroMaker.exe
+C:\Users\Admin\CSharp\HeroMaker\HeroMaker\obj\Debug\HeroMaker.pdb
