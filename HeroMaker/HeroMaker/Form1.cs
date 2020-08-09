@@ -36,35 +36,65 @@ namespace HeroMaker
             abilities[10] = chk_telepathy.Checked;
             abilities[11] = chk_weapons.Checked;
 
-            // FOR TESTING PURPOSES
-            string statis_message = "Your new hero is called " + txt_name.Text + " and has the following abilities: ";
+            // Store user input of active locations.
+            List<String> activeLocations = new List<String>();
+
+            // Add the selected items to the active locations list.
+            foreach (String city in lst_activelocations.SelectedItems)
+            {
+                activeLocations.Add(city);
+            }
+
+            // Add the prefer transport (string).
+            string preferredTransport = "";
+
+            if (rdo_flight.Checked)
+                preferredTransport = "Flight";
+            if (rdo_teleport.Checked)
+                preferredTransport = "Teleportation";
+            if (rdo_jetpack.Checked)
+                preferredTransport = "Jet Pack";
+            if (rdo_mobile.Checked)
+                preferredTransport = txt_name.Text + "mobile";
+
+            // FOR TESTING PURPOSES --- Message box of what's happening.
+            string status_message = "Your new hero is called " + txt_name.Text + " and has the following abilities: ";
 
             if (abilities[0])
-                statis_message += "Flight, ";
+                status_message += "Flight, ";
             if (abilities[1])
-                statis_message += "Super Strength, ";
+                status_message += "Super Strength, ";
             if (abilities[2])
-                statis_message += "Invisibility, ";
+                status_message += "Invisibility, ";
             if (abilities[3])
-                statis_message += "Fast Healing, ";
+                status_message += "Fast Healing, ";
             if (abilities[4])
-                statis_message += "Agility, ";
+                status_message += "Agility, ";
             if (abilities[5])
-                statis_message += "Invulnerability, ";
+                status_message += "Invulnerability, ";
             if (abilities[6])
-                statis_message += "Super Intelligence, ";
+                status_message += "Super Intelligence, ";
             if (abilities[7])
-                statis_message += "Communicatioin with Animals, ";
+                status_message += "Communicatioin with Animals, ";
             if (abilities[8])
-                statis_message += "Teleportation, ";
+                status_message += "Teleportation, ";
             if (abilities[9])
-                statis_message += "Claws and/or Fangs, ";
+                status_message += "Claws and/or Fangs, ";
             if (abilities[10])
-                statis_message += "Telepathy and/or Telekenesis, ";
+                status_message += "Telepathy and/or Telekenesis, ";
             if (abilities[11])
-                statis_message += "Weapons Expert, ";
+                status_message += "Weapons Expert, ";
 
-            MessageBox.Show(statis_message);
+            status_message += ". Our hero works in these locations: ";
+
+            foreach (String city in activeLocations) 
+            {
+                status_message += city + ", ";
+            }
+
+            status_message += ". Our hero's preferred mode of transportation is: " + preferredTransport;
+
+            MessageBox.Show(status_message);
         }
     }
 }

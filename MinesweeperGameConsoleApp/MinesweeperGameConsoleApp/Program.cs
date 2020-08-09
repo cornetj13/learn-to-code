@@ -275,6 +275,10 @@ namespace MinesweeperGameConsoleApp
                     floodFill(myBoard, r - 1, c, boardSize);
                     floodFill(myBoard, r, c + 1, boardSize);
                     floodFill(myBoard, r, c - 1, boardSize);
+                    floodFill(myBoard, r + 1, c + 1, boardSize);
+                    floodFill(myBoard, r + 1, c - 1, boardSize);
+                    floodFill(myBoard, r - 1, c + 1, boardSize);
+                    floodFill(myBoard, r - 1, c - 1, boardSize);
                 }
             }
         }
